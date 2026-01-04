@@ -1,0 +1,41 @@
+# Environment
+.env
+*.local.json
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+.python-version
+
+# uv
+uv.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Stan
+*.exe
+*.hpp
+
+# Data artifacts (keep raw data, ignore processed)
+*.nc
+*.pkl
+*.parquet
+
+# Build
+*.egg-info/
+dist/
+build/
+
+# Cache
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,44 @@
+---
+name: project-setup
+description: Project environment, Python setup, shared utilities, and known library issues. Invoke before writing Python scripts.
+---
+
+# Project Setup
+
+## Python Environment
+
+**Always use `uv run`.** Never search for Python or use venv directly.
+
+`uv run` uses the venv from the nearest `pyproject.toml` up the directory tree. Run scripts from the project root:
+
+```bash
+cd /path/to/project  # directory with pyproject.toml
+uv run python experiments/experiment_X/fit/run_fit.py
+```
+
+## Shared Utilities
+
+`bayes-kit` is a project dependency. Import directly:
+
+```python
+from bayes_kit import compile_model, fit_model, check_convergence, ...
+```
+
+Read the package source at `/workspace/bayes_kit/` for API details.
+
+## Script Structure
+
+Write small, focused scripts - not monolithic files. Separate concerns:
+
+```
+experiment_X/
+  fit/
+    run_fit.py        # Main entry point
+    diagnostics.py    # Convergence checks
+    plots.py          # Visualization
+```
+
+Each script should:
+- Do one thing well
+- Be runnable independently via `uv run python script.py`
+- Import shared logic from `bayes_kit`

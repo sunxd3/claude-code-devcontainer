@@ -1,0 +1,49 @@
+{
+  "name": "Claude Code CLI",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--memory", "24g",
+    "--memory-swap", "24g",
+    "--ulimit", "stack=8277716992:8277716992"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "containerUser": "vscode",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true,
+  "init": true,
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "source=claude-code-home,target=/home/vscode,type=volume",
+    "source=${localWorkspaceFolder}/.devcontainer/ghostty-terminfo,target=/usr/local/share/ghostty-terminfo,type=bind,readonly"
+  ],
+  "workspaceFolder": "/workspace",
+  "containerEnv": {
+    "TERMINFO_DIRS": "/usr/local/share/ghostty-terminfo:/usr/share/terminfo"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "editor.tabSize": 2,
+        "editor.rulers": [100]
+      },
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "anthropic.claude-code",
+        "eamodio.gitlens",
+        "tamasfe.even-better-toml",
+        "github.vscode-pull-request-github",
+        "usernamehw.errorlens"
+      ]
+    }
+  }
+}
