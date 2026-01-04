@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-import bayes_kit.stan as stan
+import shared_utils.stan as stan
 
 
 def test_load_stan_data(tmp_path: Path) -> None:

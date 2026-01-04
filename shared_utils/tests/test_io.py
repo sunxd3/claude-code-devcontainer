@@ -6,7 +6,7 @@ from pathlib import Path
 
 import arviz as az
 
-from bayes_kit.io import (
+from shared_utils.io import (
     _coerce_payload,
     _filter_present,
     _stan_var_names,

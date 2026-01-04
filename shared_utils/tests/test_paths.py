@@ -3,8 +3,8 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-import bayes_kit.paths as paths
-from bayes_kit.paths import ensure_dir, project_root, resolve_path
+import shared_utils.paths as paths
+from shared_utils.paths import ensure_dir, project_root, resolve_path
 
 
 def test_project_root_env_var(tmp_path: Path, monkeypatch) -> None:

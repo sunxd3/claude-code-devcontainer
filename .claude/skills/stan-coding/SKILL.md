@@ -106,7 +106,7 @@ Design Stan programs for downstream ArviZ workflow:
 
 ## Known Issues
 
-- **CmdStanPy `diagnose()` OOMs** on large data (N > 10K). Use `check_convergence()` from `bayes_kit` instead.
+- **CmdStanPy `diagnose()` OOMs** on large data (N > 10K). Use `check_convergence()` from `shared_utils` instead.
 - **ArviZ column names** are lowercase (`r_hat`, `ess_bulk`). CmdStanPy uses uppercase (`R_hat`, `ESS_bulk`).
 - **Stan CSV columns** use dots: `beta.1` not `beta[1]`.
 

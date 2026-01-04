@@ -16,13 +16,13 @@ uv run python experiments/experiment_X/fit/run_fit.py
 
 ## Shared Utilities
 
-`bayes-kit` is a project dependency. Import directly:
+`shared-utils` is a project dependency. Import directly:
 
 ```python
-from bayes_kit import compile_model, fit_model, check_convergence, ...
+from shared_utils import compile_model, fit_model, check_convergence, ...
 ```
 
-Read the package source at `/workspace/bayes_kit/` for API details.
+Read the package source at `/workspace/shared_utils/` for API details.
 
 ## Script Structure
 
@@ -39,4 +39,4 @@ experiment_X/
 Each script should:
 - Do one thing well
 - Be runnable independently via `uv run python script.py`
-- Import shared logic from `bayes_kit`
+- Import shared logic from `shared_utils`

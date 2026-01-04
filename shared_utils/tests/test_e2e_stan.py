@@ -7,7 +7,7 @@ import numpy as np
 import pytest
 import cmdstanpy
 
-import bayes_kit as bk
+import shared_utils as su
 
 
 def _require_cmdstan() -> None:
@@ -58,10 +58,10 @@ def test_e2e_stan_workflow(tmp_path: Path) -> None:
     data_path = tmp_path / "data.json"
     data_path.write_text(json.dumps(data))
 
-    model = bk.compile_model(stan_file)
-    fit = bk.fit_model(
+    model = su.compile_model(stan_file)
+    fit = su.fit_model(
         model,
-        bk.load_stan_data(data_path),
+        su.load_stan_data(data_path),
         chains=2,
         warmup=50,
         sampling=50,
@@ -70,25 +70,25 @@ def test_e2e_stan_workflow(tmp_path: Path) -> None:
         output_dir=tmp_path,
     )
 
-    idata = bk.to_arviz(
+    idata = su.to_arviz(
         fit,
         y_obs=np.array(data["y"], dtype=float),
         log_likelihood="log_lik",
         posterior_predictive=["y_rep"],
     )
 
-    convergence = bk.check_convergence(
+    convergence = su.check_convergence(
         idata,
         rhat_threshold=1.5,
         ess_bulk_threshold=10,
         ess_tail_threshold=10,
         max_divergences=10,
     )
-    loo = bk.compute_loo(idata)
+    loo = su.compute_loo(idata)
 
     output_dir = tmp_path / "results"
-    bk.save_results(idata, output_dir, convergence=convergence, loo=loo)
-    loaded = bk.load_posterior(output_dir)
+    su.save_results(idata, output_dir, convergence=convergence, loo=loo)
+    loaded = su.load_posterior(output_dir)
 
     assert "posterior" in loaded.groups()
     assert np.isfinite(convergence.min_ess_bulk)

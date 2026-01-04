@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-import bayes_kit.diagnostics as diagnostics
+import shared_utils.diagnostics as diagnostics
 
 
 @dataclass
