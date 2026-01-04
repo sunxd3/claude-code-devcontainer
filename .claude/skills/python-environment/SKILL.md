@@ -1,11 +1,9 @@
 ---
-name: project-setup
-description: Project environment, Python setup, shared utilities, and known library issues. Invoke before writing Python scripts.
+name: python-environment
+description: Python environment setup with uv, shared utilities, and script structure guidelines.
 ---
 
-# Project Setup
-
-## Python Environment
+# Python Environment
 
 **Always use `uv run`.** Never search for Python or use venv directly.
 

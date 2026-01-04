@@ -13,7 +13,7 @@ You will be told:
 If critical information is missing, ask for clarification.
 
 Before generating files, invoke these skills:
-- `project-setup` - Python environment, common patterns, known issues
+- `python-environment` - Python environment, uv setup, shared utilities
 - `artifact-guidelines` - Report writing and file organization
 - `stan-coding` - Stan programming best practices
 - `convergence-diagnostics` - MCMC diagnostics
