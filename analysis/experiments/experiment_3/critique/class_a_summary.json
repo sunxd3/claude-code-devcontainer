@@ -1,0 +1,77 @@
+{
+  "class": "A",
+  "assessment_date": "2026-01-04",
+  "models_evaluated": [
+    {
+      "id": "A1-Baseline",
+      "experiment": "experiment_1",
+      "structure": "log_mpg ~ log_weight",
+      "elpd": 147.6,
+      "se": 16.4,
+      "sigma": 0.166,
+      "parameters": 3,
+      "status": "superseded",
+      "notes": "Missing year effect; substantial residual structure"
+    },
+    {
+      "id": "A2-Year",
+      "experiment": "experiment_2",
+      "structure": "log_mpg ~ log_weight + year",
+      "elpd": 279.7,
+      "se": 17.3,
+      "sigma": 0.118,
+      "parameters": 4,
+      "status": "recommended",
+      "notes": "Good fit; parsimonious; origin effects negligible conditional on weight+year"
+    },
+    {
+      "id": "A3-Robust",
+      "experiment": "experiment_3",
+      "structure": "log_mpg ~ log_weight + year (Student-t)",
+      "elpd": 286.1,
+      "se": 17.5,
+      "sigma": 0.100,
+      "nu_median": 7.1,
+      "nu_95ci": [3.9, 20.6],
+      "parameters": 5,
+      "status": "viable_alternative",
+      "notes": "Heavy tails detected (nu~7) but ELPD gain not significant (z=0.26)"
+    }
+  ],
+  "pairwise_comparisons": [
+    {
+      "model_a": "A2-Year",
+      "model_b": "A1-Baseline",
+      "elpd_diff": 132.1,
+      "significant": true,
+      "interpretation": "Year effect provides substantial predictive improvement"
+    },
+    {
+      "model_a": "A3-Robust",
+      "model_b": "A2-Year",
+      "elpd_diff": 6.4,
+      "z_score": 0.26,
+      "significant": false,
+      "interpretation": "Student-t provides negligible predictive improvement despite heavy tails"
+    }
+  ],
+  "class_a_conclusions": {
+    "representative_model": "A2-Year",
+    "key_findings": [
+      "Weight elasticity near -1 confirms physical model",
+      "Year effect ~3.3% per year captures technological progress",
+      "Origin effects negligible conditional on weight+year",
+      "Heavy tails present (nu~7) but predictively equivalent to Normal"
+    ],
+    "residual_issues": [
+      "Diesel vehicles under-predicted (fuel type not modeled)",
+      "Rotary engines over-predicted (engine type not modeled)",
+      "Slight positive bias in 1980-82 (possible year non-linearity)"
+    ]
+  },
+  "recommendations": {
+    "proceed_to_class_b": true,
+    "proceed_to_class_c": false,
+    "rationale": "Class B will test whether explicit origin terms improve prediction beyond weight+year. Class C hierarchical models unlikely to help with only 3 large groups."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "best_model": "A3-Robust",
+  "recommended_model": "A2-Year",
+  "elpd_ranking": [
+    {
+      "model": "A3-Robust",
+      "elpd": 286.1,
+      "se": 17.5,
+      "rank": 1
+    },
+    {
+      "model": "A2-Year",
+      "elpd": 279.7,
+      "se": 17.3,
+      "rank": 2
+    },
+    {
+      "model": "A1-Baseline",
+      "elpd": 147.6,
+      "se": 16.4,
+      "rank": 3
+    }
+  ],
+  "key_comparisons": [
+    {
+      "comparison": "A2 vs A1",
+      "diff": 132.2,
+      "z": 5.54,
+      "significant": true
+    },
+    {
+      "comparison": "A3 vs A2",
+      "diff": 6.3,
+      "z": 0.26,
+      "significant": false
+    },
+    {
+      "comparison": "A3 vs A1",
+      "diff": 138.5,
+      "z": 5.76,
+      "significant": true
+    }
+  ],
+  "pareto_k_summary": {
+    "all_models_pass": true,
+    "max_k": 0.15,
+    "k_good_pct": 100.0
+  },
+  "recommendation": "ADEQUATE",
+  "reasoning": "A2-Year is adequate: Year term dramatically improves fit (ELPD +132 over baseline). Robust errors (A3) show nu~7 indicating outliers exist, but ELPD gain is not significant (z=0.26). Origin effects disappear after conditioning on weight+year (all t < 2). Class B models testing origin are unnecessary - proceed to audit."
+}

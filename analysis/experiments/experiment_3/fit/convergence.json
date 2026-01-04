@@ -1,0 +1,11 @@
+{
+  "max_rhat": 1.0,
+  "min_ess_bulk": 1622.0,
+  "min_ess_tail": 1826.0,
+  "n_divergent": 0,
+  "converged": true,
+  "rhat_threshold": 1.01,
+  "ess_bulk_threshold": 400,
+  "ess_tail_threshold": 400,
+  "max_divergences": 0
+}

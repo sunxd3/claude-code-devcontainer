@@ -1,0 +1,10 @@
+column,dtype,n_missing,pct_missing,n_unique,n_zeros,n_negative
+mpg,float64,0,0.0,129,0.0,0.0
+cylinders,int64,0,0.0,5,0.0,0.0
+displacement,float64,0,0.0,82,0.0,0.0
+horsepower,float64,6,1.51,93,0.0,0.0
+weight,float64,0,0.0,351,0.0,0.0
+acceleration,float64,0,0.0,95,0.0,0.0
+model_year,int64,0,0.0,13,0.0,0.0
+origin,int64,0,0.0,3,0.0,0.0
+car_name,object,0,0.0,305,,

@@ -1,0 +1,60 @@
+{
+  "model": "A3-Robust (Student-t errors)",
+  "n_observations": 392,
+  "residual_statistics": {
+    "mean": 0.00021293041826980547,
+    "std": 0.11747941318535911,
+    "min": -0.407538573857821,
+    "max": 0.40196786782018856
+  },
+  "test_statistic_pvalues": {
+    "median_pval": 0.5935,
+    "mad_pval": 0.192,
+    "skewness_pval": 0.78425,
+    "kurtosis_pval": 0.075
+  },
+  "tail_statistics": {
+    "student_t": {
+      "obs_min": 2.1972245773362196,
+      "obs_max": 3.8416005411316,
+      "obs_q01": 2.3978952727983707,
+      "obs_q99": 3.77169515845943,
+      "obs_range": 1.6443759637953805,
+      "obs_iqr": 0.534082485930258,
+      "obs_kurtosis": -0.8227093196667279,
+      "obs_skewness": -0.1308784468547276,
+      "pval_min": 0.2865,
+      "pval_max": 0.669,
+      "pval_range": 0.49125,
+      "pval_kurtosis": 0.075,
+      "rep_min_mean": 2.2248463960525,
+      "rep_min_std": 0.13094999176793562,
+      "rep_max_mean": 3.904925589775,
+      "rep_max_std": 0.1350946066130118,
+      "rep_kurtosis_mean": -0.6541124305099271
+    },
+    "normal": {
+      "obs_min": 2.1972245773362196,
+      "obs_max": 3.8416005411316,
+      "obs_q01": 2.3978952727983707,
+      "obs_q99": 3.77169515845943,
+      "obs_range": 1.6443759637953805,
+      "obs_iqr": 0.534082485930258,
+      "obs_kurtosis": -0.8227093196667279,
+      "obs_skewness": -0.1308784468547276,
+      "pval_min": 0.19675,
+      "pval_max": 0.65425,
+      "pval_range": 0.37075,
+      "pval_kurtosis": 0.07275,
+      "rep_min_mean": 2.24913563455,
+      "rep_min_std": 0.06635102597850417,
+      "rep_max_mean": 3.8695124107,
+      "rep_max_std": 0.06287965677848556,
+      "rep_kurtosis_mean": -0.7078598303978615
+    }
+  },
+  "extreme_observations": {
+    "count": 8,
+    "threshold": "2.5 SD"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "model": "A2-Year",
+  "true_params": {
+    "alpha": 3.1,
+    "beta_weight": -0.9,
+    "beta_year": 0.03,
+    "sigma": 0.15
+  },
+  "n_simulations": 5,
+  "n_observations": 200,
+  "all_converged": true,
+  "total_divergences": 0,
+  "max_rhat": 1.0,
+  "min_ess_bulk": 3575.0,
+  "coverage_by_param": {
+    "alpha": 100.0,
+    "beta_weight": 80.0,
+    "beta_year": 100.0,
+    "sigma": 100.0
+  },
+  "overall_coverage": 95.0,
+  "pass_criteria": {
+    "all_converged": true,
+    "no_divergences": true,
+    "coverage_adequate": true,
+    "max_rhat_ok": true
+  },
+  "passed": true
+}

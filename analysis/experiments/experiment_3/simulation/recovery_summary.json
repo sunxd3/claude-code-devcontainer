@@ -1,0 +1,39 @@
+{
+  "model": "A3-Robust (Student-t)",
+  "true_params": {
+    "alpha": 3.1,
+    "beta_weight": -0.9,
+    "beta_year": 0.03,
+    "sigma": 0.12,
+    "nu": 15.0
+  },
+  "n_simulations": 5,
+  "n_observations": 200,
+  "ci_level": 0.9,
+  "all_converged": true,
+  "total_divergences": 0,
+  "max_rhat": 1.0,
+  "min_ess_bulk": 1705.0,
+  "coverage_by_param": {
+    "alpha": 80.0,
+    "beta_weight": 100.0,
+    "beta_year": 100.0,
+    "sigma": 100.0,
+    "nu": 100.0
+  },
+  "overall_coverage": 96.0,
+  "nu_recovery": {
+    "mean_posterior": 18.2232,
+    "mean_sd": 10.7818,
+    "coverage": 100.0,
+    "note": "nu=15 is close to normal, harder to identify than heavy tails"
+  },
+  "pass_criteria": {
+    "all_converged": true,
+    "no_divergences": true,
+    "coverage_adequate": true,
+    "max_rhat_ok": true,
+    "nu_identifiable": true
+  },
+  "passed": true
+}
