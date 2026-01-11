@@ -173,5 +173,5 @@ Build a population of validated models and iteratively improve until finding the
 
 Invoke model-selector after completing initial variants and after each refinement round.
 
-### Phase 6: Reporting → `final_report.md`
+### Phase 4: Reporting → `final_report.md`
 Invoke `report-writer` to generate the final report.
