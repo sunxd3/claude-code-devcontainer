@@ -1,0 +1,24 @@
+Posterior Predictive Check Metrics
+==================================================
+
+loo_pit_ks_stat: 0.03601611490230583
+loo_pit_ks_pval: 0.9808832169050576
+school_mean_coverage: 1.0
+schools_covered: 8/8
+treatment_effect_coverage: 1.0
+treatment_effects_covered: 8/8
+
+==================================================
+Observed Test Statistics:
+  median: 77.15
+  mad: 5.75
+  iqr: 12.15
+  min: 43.70
+  max: 104.60
+
+Replicated Test Statistics (mean):
+  median: 77.04 (SD: 1.24)
+  mad: 7.19 (SD: 0.77)
+  iqr: 14.33 (SD: 1.52)
+  min: 49.09 (SD: 4.47)
+  max: 105.62 (SD: 4.57)
