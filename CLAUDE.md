@@ -99,47 +99,48 @@ Subagents are ephemeral - they finish their task and disappear forever. Files ar
 Use this structure unless the task requires deviation:
 
 ```
-data/                           # source data and copies
-eda/                            # Phase 1: Data Understanding
-  eda_report.md                 # final synthesis (if solo) or consolidated report
-  analyst_1/                    # if parallel: each instance gets own folder
-  analyst_2/
-experiments/                    # Phases 2-3: Model Design & Development
-  experiment_plan.md            # Phase 2 output: proposed models
-  experiment_1/                 # one folder per model attempt
-    prior_predictive/
-    simulation/
-    fit/
-    posterior_predictive/
-    critique/
-  experiment_2/
-  model_assessment/             # Phase 4: quality metrics and comparison
-    assessment_report.md
-final_report.md                 # Phase 6 output
-log.md                          # running log of decisions and issues
+analysis/
+  data/                         # source data and copies
+  eda/                          # Phase 1: Data Understanding
+    eda_report.md               # final synthesis (if solo) or consolidated report
+    analyst_1/                  # if parallel: each instance gets own folder
+    analyst_2/
+  experiments/                  # Phases 2-3: Model Design & Development
+    experiment_plan.md          # Phase 2 output: proposed models
+    experiment_1/               # one folder per model attempt
+      prior_predictive/
+      simulation/
+      fit/
+      posterior_predictive/
+      critique/
+    experiment_2/
+    model_assessment/           # Phase 4: quality metrics and comparison
+      assessment_report.md
+  final_report.md               # Phase 6 output
+  log.md                        # running log of decisions and issues
 ```
 
 ### Guidelines
 - Phase outputs should be in predictable locations so subsequent phases know where to read
 - Each experiment gets its own numbered folder for isolation
 - Parallel subagent outputs go in separate folders (analyst_1, analyst_2, designer_1, etc.)
-- Always specify exact paths when invoking subagents: where to read inputs and where to write outputs (e.g., "Read data from `data/data.json` and write outputs to `eda/analyst_1/`")
+- Always specify exact paths when invoking subagents: where to read inputs and where to write outputs (e.g., "Read data from `analysis/data/data.json` and write outputs to `analysis/eda/analyst_1/`")
 - Keep log.md updated with key decisions, failures, and reasoning
 
 ### Subagent Communication
 Point subagents to files produced by previous subagents rather than summarizing content yourself. Ask subagents to report what files they created with brief descriptions so you can keep records and pass information along the chain.
 
-Example: Tell model-designer to "Read the EDA report at `eda/eda_report.md`" rather than summarizing the EDA findings yourself.
+Example: Tell model-designer to "Read the EDA report at `analysis/eda/eda_report.md`" rather than summarizing the EDA findings yourself.
 
 ## Modeling Workflow
 
-### Phase 1: Data Understanding → `eda/`
-Invoke `eda-analyst` to explore the data. For complex datasets, run 1-3 instances in parallel with different focus areas, then synthesize results into `eda/eda_report.md`.
+### Phase 1: Data Understanding → `analysis/eda/`
+Invoke `eda-analyst` to explore the data. For complex datasets, run 1-3 instances in parallel with different focus areas, then synthesize results into `analysis/eda/eda_report.md`.
 
-### Phase 2: Model Design → `experiments/experiment_plan.md`
+### Phase 2: Model Design → `analysis/experiments/experiment_plan.md`
 Invoke `model-designer` to propose models. Run 2-3 instances in parallel. Assign each a distinct structural hypothesis (e.g., direct effects vs. hierarchical grouping vs. latent dynamics) rather than arbitrary model families. Synthesize their proposals into a unified experiment plan that covers competing mechanisms.
 
-### Phase 3: Model Development and Selection → `experiments/`
+### Phase 3: Model Development and Selection → `analysis/experiments/`
 Build a population of validated models and iteratively improve until finding the best variant for each model class.
 
 **For each model class from the experiment plan:**
@@ -173,5 +174,5 @@ Build a population of validated models and iteratively improve until finding the
 
 Invoke model-selector after completing initial variants and after each refinement round.
 
-### Phase 4: Reporting → `final_report.md`
+### Phase 4: Reporting → `analysis/final_report.md`
 Invoke `report-writer` to generate the final report.

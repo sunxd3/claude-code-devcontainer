@@ -1,5 +1,47 @@
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/setup-env.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/check-workflow-complete.sh"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Evaluate if this subagent completed its assigned task.\n\nInput: $ARGUMENTS\n\nCheck:\n1. Did the subagent create output files as instructed?\n2. Did any errors occur that need fixing?\n3. Is there unfinished work mentioned in the output?\n\nReturn {\"ok\": true} if the subagent completed its task, or {\"ok\": false, \"reason\": \"Continue: [describe what remains to be done]\"} if work is incomplete."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/enforce-uv-python.sh"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Bash|Write|Edit",
