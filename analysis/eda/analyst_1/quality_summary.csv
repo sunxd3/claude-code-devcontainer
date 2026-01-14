@@ -1,0 +1,6 @@
+column,n_rows,n_missing,pct_missing,n_unique,dtype
+student_id,160,0,0.0,160,object
+school_id,160,0,0.0,8,int64
+school_name,160,0,0.0,8,object
+treatment,160,0,0.0,2,int64
+score,160,0,0.0,120,float64

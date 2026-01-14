@@ -1,0 +1,92 @@
+[
+  {
+    "scenario": "scenario_1_low_heterogeneity",
+    "description": "Low heterogeneity",
+    "converged": false,
+    "num_divergences": 2,
+    "max_rhat": 1.0,
+    "min_ess_bulk": 3558.0,
+    "true_params": {
+      "alpha_0": 75.0,
+      "tau_alpha": 5.0,
+      "beta_0": 5.0,
+      "tau_beta": 2.0,
+      "sigma": 12.0
+    },
+    "posterior_means": {
+      "alpha_0": 75.929,
+      "tau_alpha": 1.426,
+      "beta_0": 6.793,
+      "tau_beta": 1.881,
+      "sigma": 12.119
+    },
+    "posterior_sds": {
+      "alpha_0": 1.453,
+      "tau_alpha": 1.186,
+      "beta_0": 1.891,
+      "tau_beta": 1.475,
+      "sigma": 0.696
+    },
+    "fit_success": true
+  },
+  {
+    "scenario": "scenario_2_true_dgp",
+    "description": "True DGP",
+    "converged": true,
+    "num_divergences": 0,
+    "max_rhat": 1.0,
+    "min_ess_bulk": 2350.0,
+    "true_params": {
+      "alpha_0": 70.0,
+      "tau_alpha": 8.0,
+      "beta_0": 5.0,
+      "tau_beta": 3.0,
+      "sigma": 10.0
+    },
+    "posterior_means": {
+      "alpha_0": 73.296,
+      "tau_alpha": 8.315,
+      "beta_0": 8.573,
+      "tau_beta": 3.404,
+      "sigma": 10.418
+    },
+    "posterior_sds": {
+      "alpha_0": 3.119,
+      "tau_alpha": 2.582,
+      "beta_0": 2.004,
+      "tau_beta": 2.088,
+      "sigma": 0.614
+    },
+    "fit_success": true
+  },
+  {
+    "scenario": "scenario_3_high_heterogeneity",
+    "description": "High heterogeneity",
+    "converged": true,
+    "num_divergences": 0,
+    "max_rhat": 1.0,
+    "min_ess_bulk": 1887.0,
+    "true_params": {
+      "alpha_0": 70.0,
+      "tau_alpha": 10.0,
+      "beta_0": 7.0,
+      "tau_beta": 6.0,
+      "sigma": 8.0
+    },
+    "posterior_means": {
+      "alpha_0": 69.463,
+      "tau_alpha": 8.672,
+      "beta_0": 4.774,
+      "tau_beta": 4.198,
+      "sigma": 8.146
+    },
+    "posterior_sds": {
+      "alpha_0": 3.288,
+      "tau_alpha": 2.601,
+      "beta_0": 1.881,
+      "tau_beta": 1.953,
+      "sigma": 0.505
+    },
+    "fit_success": true
+  }
+]

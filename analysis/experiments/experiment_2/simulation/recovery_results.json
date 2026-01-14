@@ -1,0 +1,164 @@
+[
+  {
+    "scenario": "low_clustering",
+    "description": "Low clustering: small between-school variation",
+    "status": "PASSED",
+    "convergence": {
+      "converged": true,
+      "max_rhat": 1.0,
+      "min_ess_bulk": 1466.0,
+      "min_ess_tail": 1711.0,
+      "n_divergent": 0
+    },
+    "recovery": {
+      "alpha_0": {
+        "true": 75.0,
+        "posterior_mean": 79.769,
+        "posterior_sd": 1.494,
+        "hdi_lower": 77.048,
+        "hdi_upper": 82.626,
+        "in_hdi": false,
+        "relative_error_pct": 6.358666666666673,
+        "z_score": 3.192101740294515
+      },
+      "tau_alpha": {
+        "true": 3.0,
+        "posterior_mean": 1.928,
+        "posterior_sd": 1.403,
+        "hdi_lower": 0.0,
+        "hdi_upper": 4.356,
+        "in_hdi": true,
+        "relative_error_pct": 35.733333333333334,
+        "z_score": 0.7640769779044904
+      },
+      "beta": {
+        "true": 5.0,
+        "posterior_mean": 1.634,
+        "posterior_sd": 1.753,
+        "hdi_lower": -1.701,
+        "hdi_upper": 4.894,
+        "in_hdi": false,
+        "relative_error_pct": 67.32000000000001,
+        "z_score": 1.9201369081574446
+      },
+      "sigma": {
+        "true": 12.0,
+        "posterior_mean": 11.474,
+        "posterior_sd": 0.657,
+        "hdi_lower": 10.178,
+        "hdi_upper": 12.63,
+        "in_hdi": true,
+        "relative_error_pct": 4.383333333333331,
+        "z_score": 0.8006088280060879
+      }
+    }
+  },
+  {
+    "scenario": "medium_clustering",
+    "description": "Medium clustering: moderate between-school variation (close to true DGP)",
+    "status": "PASSED",
+    "convergence": {
+      "converged": true,
+      "max_rhat": 1.0,
+      "min_ess_bulk": 1020.0,
+      "min_ess_tail": 1589.0,
+      "n_divergent": 0
+    },
+    "recovery": {
+      "alpha_0": {
+        "true": 70.0,
+        "posterior_mean": 72.345,
+        "posterior_sd": 3.905,
+        "hdi_lower": 64.859,
+        "hdi_upper": 79.667,
+        "in_hdi": true,
+        "relative_error_pct": 3.3499999999999983,
+        "z_score": 0.6005121638924453
+      },
+      "tau_alpha": {
+        "true": 8.0,
+        "posterior_mean": 10.674,
+        "posterior_sd": 2.82,
+        "hdi_lower": 5.953,
+        "hdi_upper": 16.134,
+        "in_hdi": true,
+        "relative_error_pct": 33.425,
+        "z_score": 0.9482269503546098
+      },
+      "beta": {
+        "true": 5.0,
+        "posterior_mean": 5.058,
+        "posterior_sd": 1.558,
+        "hdi_lower": 2.101,
+        "hdi_upper": 7.971,
+        "in_hdi": true,
+        "relative_error_pct": 1.1599999999999966,
+        "z_score": 0.03722721437740682
+      },
+      "sigma": {
+        "true": 10.0,
+        "posterior_mean": 10.475,
+        "posterior_sd": 0.624,
+        "hdi_lower": 9.322,
+        "hdi_upper": 11.67,
+        "in_hdi": true,
+        "relative_error_pct": 4.7499999999999964,
+        "z_score": 0.7612179487179481
+      }
+    }
+  },
+  {
+    "scenario": "high_clustering",
+    "description": "High clustering: large between-school variation",
+    "status": "PASSED",
+    "convergence": {
+      "converged": true,
+      "max_rhat": 1.0,
+      "min_ess_bulk": 949.0,
+      "min_ess_tail": 1468.0,
+      "n_divergent": 0
+    },
+    "recovery": {
+      "alpha_0": {
+        "true": 80.0,
+        "posterior_mean": 73.157,
+        "posterior_sd": 3.793,
+        "hdi_lower": 66.011,
+        "hdi_upper": 80.216,
+        "in_hdi": true,
+        "relative_error_pct": 8.553750000000004,
+        "z_score": 1.8041128394410766
+      },
+      "tau_alpha": {
+        "true": 12.0,
+        "posterior_mean": 10.678,
+        "posterior_sd": 2.95,
+        "hdi_lower": 5.775,
+        "hdi_upper": 15.972,
+        "in_hdi": true,
+        "relative_error_pct": 11.016666666666659,
+        "z_score": 0.4481355932203387
+      },
+      "beta": {
+        "true": 3.0,
+        "posterior_mean": 2.279,
+        "posterior_sd": 1.359,
+        "hdi_lower": -0.283,
+        "hdi_upper": 4.76,
+        "in_hdi": true,
+        "relative_error_pct": 24.03333333333334,
+        "z_score": 0.5305371596762326
+      },
+      "sigma": {
+        "true": 8.0,
+        "posterior_mean": 8.27,
+        "posterior_sd": 0.479,
+        "hdi_lower": 7.417,
+        "hdi_upper": 9.232,
+        "in_hdi": true,
+        "relative_error_pct": 3.3749999999999947,
+        "z_score": 0.5636743215031307
+      }
+    }
+  }
+]

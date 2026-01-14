@@ -1,0 +1,17 @@
+InferenceData Groups:
+['posterior', 'posterior_predictive', 'log_likelihood', 'sample_stats', 'observed_data']
+
+Posterior Variables:
+  alpha_0: (4, 1000)
+  tau_alpha: (4, 1000)
+  z_alpha: (4, 1000, 8)
+  beta_0: (4, 1000)
+  tau_beta: (4, 1000)
+  z_beta: (4, 1000, 8)
+  sigma: (4, 1000)
+  alpha: (4, 1000, 8)
+  beta: (4, 1000, 8)
+  mu: (4, 1000, 160)
+
+Posterior Predictive Variables:
+  y_rep: (4, 1000, 160)

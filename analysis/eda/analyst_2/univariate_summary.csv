@@ -1,0 +1,6 @@
+column,dtype,n_unique,n_missing,pct_missing,mean,std,min,max
+student_id,object,160,0,0.00%,,,,
+school_id,int64,8,0,0.00%,4.62,2.28,1.00,8.00
+school_name,object,8,0,0.00%,,,,
+treatment,int64,2,0,0.00%,0.51,0.50,0.00,1.00
+score,float64,120,0,0.00%,77.09,10.50,43.70,104.60

@@ -1,0 +1,8 @@
+Convergence Diagnostics
+============================================================
+
+Convergence: PASSED
+  Max R-hat: 1.0000 (target < 1.01)
+  Min ESS bulk: 2151 (target > 400)
+  Min ESS tail: 2235 (target > 400)
+  Divergences: 0 (target <= 0)
