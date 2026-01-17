@@ -132,6 +132,15 @@ Point subagents to files produced by previous subagents rather than summarizing 
 
 Example: Tell model-designer to "Read the EDA report at `analysis/eda/eda_report.md`" rather than summarizing the EDA findings yourself.
 
+## Workflow Mode
+
+At the start of each conversation, determine if the user is requesting a Bayesian modeling workflow. Use the `agent-config` skill to set `workflow_mode`:
+
+- **Enable** (`workflow_mode: true`) when: user requests modeling, analysis, or any task that should produce EDA report, experiment plan, model fits, and final report
+- **Keep disabled** (default) when: simple questions, code review, debugging, explanations, exploratory work
+
+When enabled, stop hooks verify deliverables exist and EDA recommendations were addressed before allowing the session to end.
+
 ## Modeling Workflow
 
 ### Phase 1: Data Understanding → `analysis/eda/`
